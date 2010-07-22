@@ -1,0 +1,44 @@
+<div id="navigation">
+  <%= render :partial => '/layouts/page_parts/logo' %>
+  <%
+
+    main_options_array = [
+      [image_tag('calendar.png', :alt => t('navigation.items.calendar'), :title => t('navigation.items.calendar')), calendar_path],
+      [image_tag('user_calendar.png', :alt => t('navigation.items.user_calendar'), :title => t('navigation.items.user_calendar')), user_calendar_path],
+      [image_tag('unavailability.png', :alt => t('navigation.items.unavailabilities'), :title => t('navigation.items.unavailabilities')), unavailabilities_path],
+      [image_tag('user.png', :alt => t('navigation.items.user'), :title => t('navigation.items.user')), edit_user_path(current_user)]
+    ] if logged_in?
+
+    main_options_array += [
+      [image_tag('profile.png', :alt => t('navigation.items.clients'), :title => t('navigation.items.clients')), clients_path],
+      [image_tag('lab_48.png', :alt => t('navigation.items.events'), :title => t('navigation.items.events')), events_path],
+      [image_tag('group.png', :alt => t('navigation.items.users'), :title => t('navigation.items.users')), users_path]
+    ] if is_admin?
+
+    if logged_in?
+      session_options_array = [
+        [t('navigation.items.logout'), logout_path]
+      ]
+    else
+      session_options_array = []
+      session_options_array += [[t('navigation.items.login'), login_path]] unless params[:action] == 'new' and params[:controller] == 'sessions'
+      session_options_array += [[t('navigation.items.signup'), signup_path]]
+    end
+  %>
+  <% unless main_options_array.blank? %>
+    <ul id="main-options">
+      <% main_options_array.each do |object| %>
+        <% str_class = object[1][1..100].starts_with?(params[:controller]) ? ' class="current"' : '' %>
+        <li<%= str_class%>><%= link_to "<span>#{object[0]}</span>", {:controller => object[1]} %></li>
+      <% end%>
+    </ul>
+  <% end %>
+  <ul id="session-options">
+    <% if logged_in? %>
+      <li><span><%= t('navigation.hello', :login => current_user.login) %></span></li>
+    <% end %>
+    <% session_options_array.each do |object| %>
+      <li><%= link_to "<span>#{object[0]}</span>", {:controller => object[1]} %></li>
+    <% end%>
+  </ul>
+</div>

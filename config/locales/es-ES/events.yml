@@ -1,0 +1,20 @@
+es-ES:
+  events:
+    create:
+      success: La actividad se ha creado correctamente
+    edit_assignments: Editar asignaciones
+    edit_event: Editar actividad
+    events: Actividades
+    form:
+      address_empty_for_client_address: (Dejar en blanco para utilizar la del cliente)
+    new_event: Nueva actividad
+    new_event_for_client: Nueva actividad para {{client}}
+    no_code: Sin código
+    no_contacts: No hay contactos
+    no_events: No hay actividades
+    send_resume:
+      not_users_assigned: El evento no tiene usuarios asignados
+      success: Se ha enviado la información a los animadores participantes
+    update:
+      success: La actividad se ha modificado correctamente
+    users_assigned: Animadores asignados

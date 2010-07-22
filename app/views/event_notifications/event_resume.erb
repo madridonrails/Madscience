@@ -1,0 +1,13 @@
+<%= t('event_mailer.send_resume.body_intro', :event => @event) %>
+<br/>
+<%= render :partial => 'event_info' %>
+<br/>
+<%= render :partial => 'client_info' %>
+<br/>
+
+<div id="print-event-comments">
+	<span class="title"><%= t('print.event.comments') %></span>
+	<%= @event.comments.gsub("\n", '<br/>') %>
+</div>
+
+

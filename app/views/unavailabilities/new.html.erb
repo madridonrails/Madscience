@@ -1,0 +1,8 @@
+<%= object_messages(@unavailability) %>
+<h1><span><%= t('unavailabilities.new_unavailability') %></span></h1>
+<%  form_for @unavailability, :url => unavailabilities_url, :html => {:class => 'standard-form'} do |f| %>
+  <fieldset>
+    <legend><%= t 'general.new' %><br/></legend>
+    <%= render :partial => 'form', :locals => {:f => f} %>
+  </fieldset>
+<% end %>

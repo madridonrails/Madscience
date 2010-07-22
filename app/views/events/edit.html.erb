@@ -1,0 +1,8 @@
+<%= object_messages(@event) %>
+<h1><span><%= "#{t('events.edit_event')} #{@event.name}" %></span></h1>
+<% form_for @event, event_url(@event), :method => :put, :html => {:class => 'standard-form'} do |f|%>
+  <fieldset>
+    <legend><%= t 'general.edit' %> <%= @event.id %></legend>
+    <%= render :partial => 'form', :locals => {:f => f} %>
+  </fieldset>
+<% end %>

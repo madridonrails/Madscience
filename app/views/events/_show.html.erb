@@ -1,0 +1,43 @@
+<h1><span><%= @event.name %></span></h1>
+<div class="show-info">
+  <ul>
+    <li><label><%= t 'activerecord.attributes.event.name' %>: </label><span><%= h @event.name %> </span></li>
+    <li><label><%= t 'activerecord.attributes.event.description' %>: </label><span><%= h(@event.description) %> </span></li>
+    <li><label><%= t 'activerecord.attributes.event.address' %>: </label><span><%= h(@event.address) rescue '' %> </span></li>
+    <li><label><%= t 'activerecord.attributes.event.contact_id' %>: </label><span><%= h(@event.contact.name) rescue t('events.no_contacts') %> </span></li>
+    <li><label><%= t 'activerecord.attributes.contact.phone' %>: </label><span><%= h(@event.contact.phone) rescue h(@event.client.phone) %> </span></li>
+  </ul>
+  <ul>
+    <% if not current_user.events.include?(@event) %>
+      <li><%= link_to t('assignments.create.link'), solicitate_event_assignments_path(@event), :method => :post, :class=> 'button' %></li>
+    <% else  assignment = Assignment.find_by_event_id_and_user_id(@event.id, current_user.id) %>
+      <% if assignment.canceled? %>
+        <li><%= link_to t('assignments.pendant.link'), solicitate_event_assignment_path(@event, Assignment.find_by_event_id_and_user_id(@event.id, current_user.id)), :method => :put %>
+      <% elsif assignment.denied? %>
+        <%= t'assignments.assignment_is_denied' %>
+      <% end %>
+    <% end %>
+  </ul>
+  <% if current_user.is_admin? %>
+    <div id="event-users-assigned">
+      <h2><%= t 'events.users_assigned' %></h2>
+      <ul>
+        <% @event.users_assigned.each do |u| %>
+          <li><%= u.login %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <ul>
+    <li>
+      <%= link_to image_tag('pencil_16.png', :alt => t('general.edit')) + t('general.edit'), edit_event_url(@event), :class => 'button', :title => t('general.edit')  if is_admin? %>
+      <%= link_to image_tag('left_16.png', :alt => t('general.back')) + t('general.back'), events_path, :class => 'button', :title => t('general.back') %>
+      <%= link_to image_tag('print_16.png', :alt => t('general.print')) + t('general.print'), print_event_url(@event), :class => 'button', :title => t('general.print') %>
+      <% if current_user.is_admin? %>
+        <%= link_to image_tag('letter_16.png', :alt => t('general.send_by_mail')) + t('general.send_by_mail'), send_resume_event_url(@event), :class => 'button', :title => t('general.send_by_mail') %>
+      <% end %>
+    </li>
+  </ul>
+</div>
+
+

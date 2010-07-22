@@ -1,0 +1,7 @@
+    <td><%= h assignment.event.name %> </td>
+    <td><%= h assignment.user.email %>
+    <% Assignment.aasm_states.collect{|x| x.name}.each do |state| %>
+      <td>
+        <%=  radio_button_tag("aasm_state", "#{state}", state == assignment.aasm_current_state, :onclick => remote_function(:update => "assignment-states-#{assignment.id}", :url => update_state_event_assignment_path(assignment.event, assignment), :method => :put, :with => "'assignment[aasm_state]=' + value "), :id => "aasm_state_#{assignment.id}") %>
+      </td>
+    <% end %>

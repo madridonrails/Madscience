@@ -1,0 +1,99 @@
+# refer to http://www.yaml.org/spec/1.1/ for clarification on YAML collections
+# project1:
+#   path: /path/to/my/project/stylesheets
+#   namespace: custom-namespace-1-
+#   custom_css:
+#     ie.css:
+#       - custom-ie.css
+#     print.css:
+#       - docs.css
+#       - my-print-styles.css
+#     screen.css:
+#       - subfolder-of-stylesheets/sub_css.css
+#   custom_layout:
+#     column_count: 12
+#     column_width: 70
+#     gutter_width: 10
+#   plugins:
+#     - fancy-type
+#     - buttons
+# project2:
+#   path: /path/to/different/stylesheets
+#   namespace: different-namespace-
+#   custom_css:
+#     screen.css:
+#       - custom_screen.css
+#   semantic_classes:
+#     "#footer, #header": ".span-24, div.span-24"
+#     "#content": ".span-17, div.span-17, div.colborder"
+#     "#extra-content": ".span-6, div.span-6"
+#     "div#navigation": "div.span_24, .span-24"
+#     "div.section, div.entry, .feeds": ".span-6 div.span-6"
+# project3:
+#   path: /path/to/another/projects/styles
+
+madscience:
+  path: /home/javier/proyectos/madscience/public/stylesheets/blueprint
+  plugins:
+    - fancy-type
+    - buttons
+  semantic_classes:
+    "#main, #footer, #data, #sessions-main, #register, #forgot-password, #reset-password": ".span-24, div.span-24, last"
+    
+    "#sessions-main #logo, #register #logo, #forgot-password #logo, #reset-password #logo": ".span-4, div.span-4, last"
+    "#sessions-main form": ".span-16, div.span-16, prepend-4, last"
+    "#sessions-main form div": ".span-11, div.span-11, last"
+    "#sessions-main form label": ".span-5, div.span-5"
+    "#sessions-main form input": ".span-6, div.span-6, last"
+    "#sessions-main form button": ".span-3, div.span-3, last"
+
+    "#register form": ".span-16, div.span-16, prepend-3, append-1, last"
+    "#register form label": ".span-5, div.span-5, append-1"
+    '#register form input[type="text"], #register form input[type="password"]': ".span-10, div.span-10, last"
+
+    "#forgot-password form": ".span-18, div.span-18, prepend-2, last"
+    "#forgot-password div": ".span-13, div.span-13, last, append-5"
+    "#forgot-password form label": ".span-3, div.span-3"
+    "#forgot-password form input": ".span-10, div.span-10, last"
+
+    "#reset-password form": ".span-18, div.span-18, prepend-2, last"
+    "#reset-password div": ".span-17, div.span-17, last, append-1"
+    "#reset-password form label": ".span-7, div.span-7"
+    "#reset-password form input": ".span-10, div.span-10, last"
+
+    "h1": ".span-24, div.span-24, last"
+    "h1 span": "prepend-1, append-1, last"
+
+    "#main form": ".span-24, div.span-24"
+    "#main form fieldset": ".span-22, div.span-22, append-1, prepend-1"
+    "#main form fieldset ul li": ".span-11, div.span-11"
+    "#main form fieldset ul li.last": ".span-11, div.span-11, last"
+    "#main form fieldset label, #main form fieldset li span.input, #main form fieldset li span.label": ".span-4, div.span-4"
+    "#main form fieldset input, #main form fieldset textarea": ".span-6, div.span-6, last"
+    "#main form fieldset input.input-calendar": ".span-5, div.span-5"
+    "#main form fieldset img.calendar_date_select_popup_icon": ".span-1, div.span-1, prepend-top, last"
+    "#main div.show-info": ".span-24, div.span-24, last"
+    "#main div.show-info ul": "span-22, div.span-22, append-1, prepend-1, last"
+    "#main div.show-info ul label": ".span-5, div.span-5"
+    "#main div.show-info ul span": ".span-17, div.span-17, last"
+
+    "#main #items-list": ".span-24, div.span-24"
+
+    "#message span": ".span-18, append-1, prepend-1, last"
+
+    ".pagination": ".span-24, div.span-24"
+    "#index-add-button": ".span-24, div.span-24"
+    "#index-add-button img": ".right"
+
+    "#event-users-assigned": ".span-24, div.span-24, last"
+    "#event-users-assigned h2, #event-users-assigned ul": "span-22, div.span-22, append-1, prepend-1, last"
+
+### PRINTING EVENTS ###
+    "#print-header": ".span-24, div.span-24, last, append-bottom"
+    "#print-header img": "span-3, div.span-3"
+    "#print-header span": "span-19, div.span-19, append-1, prepend-1, last"
+    "#print-event-info": ".span-11, div.span-11, append-1"
+    "#print-client-info": ".span-11, div.span-11, prepend-1, last"
+    "#print-event-info table, #print-client-info table": ".span-11, div.span-11, last"
+    "#print-event-comments": "span-24, div.span-24"
+    "#print-event-comments span": "span-24, div.span-24"

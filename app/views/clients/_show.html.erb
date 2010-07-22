@@ -1,0 +1,14 @@
+<h1><span><%= @client.name %></span></h1>
+<div class="show-info">
+  <ul>
+    <li><label><%= t 'activerecord.attributes.client.name' %>: </label><span><%= h @client.name %> </span></li>
+    <li><label><%= t 'activerecord.attributes.client.address' %>: </label><span><%= h(@client.address) %> </span></li>
+    <li><label><%= t 'activerecord.attributes.client.mail' %>: </label><span><%= h(@client.mail) %> </span></li>
+    <li><label><%= t 'activerecord.attributes.client.phone' %>: </label><span><%= h(@client.phone) %> </span></li>
+  </ul>
+  <ul>
+    <li><%= link_to image_tag('pencil_16.png', :alt => t('general.edit')) + t('general.edit'), edit_client_url(@client), :class => 'button', :title => t('general.edit') %> <%= link_to image_tag('left_16.png', :alt => t('general.back')) + 'Volver', clients_url, :class => 'button', :title => t('general.back') %></li>
+  </ul>
+</div>
+
+

@@ -1,0 +1,28 @@
+<ul>
+  <li>
+    <%= f.label :name, t('activerecord.attributes.client.name') %>
+    <%= f.text_field :name%>
+  </li>
+  <li class="last">
+    <%= f.label :cif, t('activerecord.attributes.client.cif') %>
+    <%= f.text_field :cif %>
+  </li>
+  <li class="last">
+    <%= f.label :mail, t('activerecord.attributes.client.mail')%>
+    <%= f.text_field :mail %>
+  </li>
+  <li>
+    <%= f.label :phone, t('activerecord.attributes.client.phone') %>
+    <%= f.text_field :phone %>
+  </li>
+  <li class="last">
+    <%= f.label :address, t('activerecord.attributes.client.address') %>
+    <%= f.text_area :address, :rows => 3, :cols => 3 %>
+  </li>
+  <li>
+    <%= f.label :comments, t('activerecord.attributes.client.comments') %>
+    <%= f.text_area :comments, :rows => 3, :cols => 3 %>
+  </li>
+
+  <%= form_buttons clients_url, :class => 'last'%>
+</ul>

@@ -1,0 +1,8 @@
+<%= object_messages(@contact) %>
+<h1><span><%= "#{t('contacts.edit_contact', :contact => @contact.name)}" %></span></h1>
+<% form_for @contact, :url => client_contact_url(@contact.client, @contact), :method => :put, :html => {:class => 'standard-form'} do |f|%>
+  <fieldset>
+    <legend><%= t 'general.edit' %></legend>
+    <%= render :partial => 'form', :locals => {:f => f} %>
+  </fieldset>
+<% end %>

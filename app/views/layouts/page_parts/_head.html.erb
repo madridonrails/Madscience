@@ -1,0 +1,15 @@
+<head>
+  <title><%= t'head.title' %></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
+  <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
+  <!--[if IE]>
+  <%= stylesheet_link_tag 'blueprint/ie', :media => 'all' %>
+  <![endif]-->
+  <%= stylesheet_link_tag "event_calendar" %>
+  <%= stylesheet_link_tag 'type', :media=>'all' %>
+  <%= stylesheet_link_tag 'structure', :media=>'all' %>
+  <%= javascript_include_tag :defaults %>
+  <link rel="shortcut icon" href="/images/favicon.ico" />
+  <%= calendar_date_select_includes %>
+</head>

@@ -1,0 +1,8 @@
+es-ES:
+  contacts:
+    contacts: Contactos de {{client}}
+    create:
+      success: El contacto se ha creado correctamente
+    edit_contact: Editar contacto {{contact}}
+    new_contact: Nuevo contacto para {{client}}
+    no_contacts: No hay contactos para este cliente

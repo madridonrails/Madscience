@@ -1,0 +1,4 @@
+SITE_URL = 'http://localhost:3000'
+HOST = 'localhost:3000'
+SITE_NAME = 'Locos por la ciencia'
+DATETIME_FORMAT = '%d/%m/%Y %H:%M'

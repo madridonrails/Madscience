@@ -1,0 +1,46 @@
+<ul>
+  <li>
+    <%= f.label :code, t('activerecord.attributes.event.code') %>
+    <%= f.text_field :code %>
+  </li>
+  <li class="last">
+    <span class="label"><%= t('activerecord.attributes.event.client_id') %></span>
+    <span class="input"><%= @event.client.name %></span>
+  </li>
+  <li>
+    <%= f.label :name, t('activerecord.attributes.event.name') %>
+    <%= f.text_field :name , :rows => 10%>
+  </li>
+  <li class="last">
+    <%= f.label :description, t('activerecord.attributes.event.description') %>
+    <%= f.text_area :description , :rows => 10%>
+  </li>
+  <li>
+    <%= f.label :start_at, t('activerecord.attributes.event.start_at')%>
+    <%= calendar_date_select :event, :start_at, :class => 'input-calendar', :image => 'calendar_32.png' %>
+  </li>
+  <li class="last">
+    <%= f.label :end_at, t('activerecord.attributes.event.end_at') %>
+    <%= calendar_date_select :event, :end_at, :class => 'input-calendar', :image => 'calendar_32.png' %>
+  </li>
+  <li>
+    <% label_address = t('activerecord.attributes.event.address') %>
+    <% label_address << '<br/><span class="tip">' + t('events.form.address_empty_for_client_address') + '</span>' if @event.new_record? %>
+    <%= f.label :address, label_address %>
+    <%= f.text_area :address, :rows => 3, :cols => 3 %>
+  </li>
+  <li class="last">
+    <%= f.label :resources, t('activerecord.attributes.event.resources') %>
+    <%= f.text_field :resources, :rows => 3, :cols => 3 %>
+  </li>
+  <li>
+    <%= f.label :comments, t('activerecord.attributes.event.comments') %>
+    <%= f.text_area :comments, :rows => 3, :cols => 3 %>
+  </li>
+  <li>
+    <%= f.label :contact, t('activerecord.attributes.client.contact') %>
+    <%= f.select(:contact_id, @event.client.contacts.collect{|c| [c.name, c.id]}) %>
+  </li>
+
+  <%= form_buttons events_url%>
+</ul>

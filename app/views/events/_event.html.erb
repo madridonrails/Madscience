@@ -1,0 +1,22 @@
+<%unless event.blank?%>
+  <% td_class = cycle('', ' class="odd"') %>
+  <tr>
+    <td<%= td_class %>><%= h event.client.name rescue t'events.no_client' %> </td>
+    <td<%= td_class %>><%= h event.code %> </td>
+    <td<%= td_class %>><%= h event.name %> </td>
+    <td<%= td_class %>><%= h event.start_at %></td>
+    <td<%= td_class %>><%= h event.end_at %></td>
+    <td<%= td_class %>><%= h event.address %></td>
+    <td<%= td_class %>><%= h event.resources %></td>
+    <% users = event.users_assigned.collect{|u| u.login}.join '<br/>' %>
+    <td<%= td_class %>><%= users %></td>
+    <td<%= td_class %>>
+       <%= link_to image_tag('show_16.png', :alt => t('general.show'),  :title => t('general.show' )), event_url(event) %>
+       <%= link_to image_tag('print_16.png', :alt => t('general.print'), :title => t('general.print')), print_event_url(event), :target => :blank %>
+       <%= link_to image_tag('pencil_16.png', :alt => t('general.edit'), :title => t('general.edit' )), edit_event_url(event) %>
+       <%= link_to image_tag('letter_16.png', :alt => t('general.send_by_mail'), :title => t('general.send_by_mail')), send_resume_event_url(event) %>
+       <%= link_to image_tag('group_16.png', :alt => t('events.edit_assignments'), :title => t('events.edit_assignments')), event_assignments_url(event) %>
+       <%= link_to image_tag('delete_16.png', :alt => t('general.delete'), :title =>  t('general.delete' )), event_url(event), :method => 'delete', :confirm => t('general.are_you_sure') %>
+    </td>
+  </tr>
+<% end %>

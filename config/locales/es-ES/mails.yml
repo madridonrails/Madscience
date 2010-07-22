@@ -1,0 +1,22 @@
+es-ES:
+  assignment_mailer:
+    accepted:
+      body: Se ha aceptado tu asignación para el evento {{event}}. Si quieres anular esta asignación, puedes hacerlo pulsando en {{url}}
+      subject: Asignación a un evento aceptada
+    canceled:
+      body: Se ha cancelado tu asignación para el evento {{event}}
+      subject: Asignación a un evento cancelada
+    canceled_to_admin:
+      subject: Se ha cancelado una asignación a un evento por parte de un usuario
+      body: El usuario {{user}} ha cancelado la suscripción al evento {{event}}
+    denied: 
+      body: Se ha denegado una asignación para el evento {{event}}
+      subject: Se ha denegado tu asignación para el evento {{event}}
+    pendant:
+      body: Se ha marcado como pendiente una asignación para participar en el evento. Si quieres anular esta petición, puedes hacerlo pulsando en {{url}}
+      subject: Asignación al evento {{event}} pendiente de confirmación
+    pendant_to_admin:
+      accept_url: para aceptar la solicitud pulse en el siguiente enlace {{url}}
+      subject: Solicitud para participación en evento
+      deny_url: Para rechazar la solicitud pulse en el siguiente enlace {{url}}
+      user_info: El usuario {{user}} con correo {{email}} ha solicitado la participación en el evento{{event}}

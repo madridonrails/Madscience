@@ -1,0 +1,13 @@
+<%unless contact.blank?%>
+  <% td_class = cycle('', ' class="odd"') %>
+  <tr>
+    <td<%= td_class %>><%= h contact.name %></td>
+    <td<%= td_class %>><%= h contact.phone %></td>
+    <td<%= td_class %>><%= h contact.email %></td>
+    <td<%= td_class %>>
+       <%= link_to image_tag('show_16.png', :alt => t('general.show'),  :title => t('general.show' )), client_contact_url(@client,contact) %>
+       <%= link_to image_tag('pencil_16.png', :alt => t('general.edit'), :title => t('general.edit' )), edit_client_contact_url(@client,contact) %>
+       <%= link_to image_tag('delete_16.png', :alt => t('general.delete'), :title =>  t('general.delete' )), client_contact_url(@client,contact), :method => 'delete', :confirm => t('general.are_you_sure') %>
+    </td>
+  </tr>
+<% end %>

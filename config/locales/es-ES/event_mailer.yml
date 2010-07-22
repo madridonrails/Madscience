@@ -1,0 +1,5 @@
+es-ES:
+  event_mailer:
+    send_resume:
+      body_intro: Información del evento {{event}}
+      subject: Resumen del evento {{event}}

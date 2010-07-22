@@ -1,0 +1,14 @@
+  <h1><%= t 'users.users' %></h1>
+<%= object_messages %>
+  <%= render :partial => 'filter' %>
+<% unless @users.empty? %>
+  <table id="items-list">
+    <%= render :partial => 'header' %>
+    <%= render :partial => 'user', :collection => @users %>
+  </table>
+<% end %>
+  <div id="index-add-button">
+    <%=  link_to image_tag('plus_32.png', :class => 'add-button', :alt => t('general.new'), :title => t('general.new')), new_user_url %>
+  </div>
+<%= will_paginate(@users, :prev_label => t('pagination.prev'), :next_label => t('pagination.next'), :params => params.clone.delete_if{|k,v| k == 'controller' || k == 'action' || k == 'page'}) %>
+

@@ -1,0 +1,8 @@
+<%= render :partial => '/events/print/header' %>
+<%= render :partial => '/events/print/event_info' %>
+<%= render :partial => '/events/print/client_info' %>
+
+<div id="print-event-comments">
+	<span class="title"><%= t('print.event.comments') %></span>
+  <%= @event.comments.gsub("\n", '<br/>') unless @event.comments.blank? %>
+</div>

@@ -1,0 +1,18 @@
+<%= error_messages_for :user %>
+<div id="reset-password">
+  <h1><%= t('users.reset_password') %></h1>
+  <%= render :partial => '/layouts/page_parts/logo' %>
+  <% form_for :user do |f| -%>
+  <div>
+    <%= label_tag 'password', t('activerecord.attributes.user.password') %>
+    <%= f.password_field :password %>
+
+    <%= label_tag 'password_confirmation', t('activerecord.attributes.user.password_confirmation') %>
+    <%= f.password_field :password_confirmation %>
+
+    <button type="submit" title="<%= t('general.ok') %>">
+      <%= image_tag 'icons/tick.png', :alt => t('general.ok'), :title => t('general.ok') %><%= t('general.ok') %>
+    </button>
+  </div>
+  <% end -%>
+</div>

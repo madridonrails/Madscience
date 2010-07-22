@@ -1,0 +1,8 @@
+<%= object_messages(@assignment) %>
+<h1><span><%= t('assignments.new_assignment_from_user', :user => @user.login) %></span></h1>
+<% form_for @assignment, :url => user_assignments_url(@user), :html => {:class => 'standard-form'} do |f| %>
+	<fieldset>
+    <legend><%= t 'assignment.new_assignment_from_user', :user => @user.login %><br/></legend>
+    <%= render :partial => '/assignments/from_user/form', :locals => {:f => f} %>
+	</fieldset>
+<% end %>

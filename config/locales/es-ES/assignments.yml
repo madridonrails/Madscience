@@ -1,0 +1,38 @@
+es-ES:
+  assignments:
+    aasm_state:
+      accepted: Aceptado
+      canceled: Cancelado
+      confirmed: Confirmado
+      denied: Denegado
+      pendant: Pendiente
+    accept:
+      success: Se ha aceptado la solicitud del usuario {{user}} al evento {{event}}
+      title:
+        incomplete: Aceptar la solicitud del usuario {{user}} al evento {{event}}
+        complete: ¡El evento está completo!
+    assignment_is_denied: La solicitud ha sido denegada
+    cancel:
+      error: Su solicitud no se ha podido cancelar
+      success: Su solicitud se ha cancelado correctamente
+      title: Cancelar su sucripción al evento {{event}}
+    create:
+      assignment_already_exists: La solicitud ya existe. Se le ha redirigido al formulario de edición para que pueda editarla
+      link: Solicitar
+      error: Ha habido un error a la hora de enviar la solicitud. Por favor, vuelva a intentarlo
+      success: La solicitud se ha enviado
+    deny:
+      error: No ha podido denegar esta solicitud
+      success: La solicitud se ha denegado
+      title: Denegar la suscripción de {{user}} al evento {{event}}
+    edit: Editar solicitud de {{user}} para el evento {{event}}
+    event_assignments: Solicitudes para el evento {{event}}
+    new_assignment_from_event: Asignar usuario al evento {{event}}
+    new_assignment_from_user: Asignar evento a usuario {{user}}
+    no_assignments: No hay solicitudes
+    no_assignments_for_event: No hay solicitudes para este evento
+    pendant:
+      error: No se ha podido realizar la solicitud
+      link: Solicitar
+      success: La solicitud se ha llevado a cabo
+    user_assignments: Solicitudes del usuario {{user}}

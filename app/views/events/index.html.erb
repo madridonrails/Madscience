@@ -1,0 +1,10 @@
+  <h1><%= t 'events.events' %></h1>
+<%= object_messages %>
+  <%= render :partial => 'filter' %>
+<% unless @events.empty? %>
+  <table id="items-list">
+    <%= render :partial => 'header' %>
+    <%= render :partial => 'event', :collection => @events %>
+  </table>
+<% end %>
+<%= will_paginate(@events, :prev_label => t('pagination.prev'), :next_label => t('pagination.next'), :params => params.clone.delete_if{|k,v| k == 'controller' || k == 'action' || k == 'page'}) %>

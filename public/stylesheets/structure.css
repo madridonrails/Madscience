@@ -1,0 +1,349 @@
+html, body{
+  /*background-image: url(../images/background.gif);*/
+  background-color:#98AEC4;
+}
+
+h1{
+  color:#5A6265;
+  margin-bottom: 0;
+}
+
+a{
+  cursor:pointer;
+}
+
+h1 span{
+  background-color:#CDCDCD;
+}
+
+form li{
+  list-style:none;
+}
+
+textarea{
+  height:50px;
+}
+
+#content{
+  margin-left:150px;
+}
+
+#navigation{
+  position:fixed;
+  height:5em;
+  background-color:#3A4278;
+  width:100%;
+  border-bottom: medium solid #E6DE4E;
+  z-index:999;
+  padding-left:1em;
+  padding-right:1em;
+}
+
+#navigation ul li{
+  list-style:none;
+  display:inline-block;
+  padding-right:1em;
+}
+
+#navigation ul li a{
+  text-decoration:none;
+}
+
+#navigation #logo{
+  display:inline-block;
+  float:left;
+}
+
+#main-options{
+  float:left;
+}
+
+#main-options li a span img{
+  margin-top:1em;
+}
+
+#session-options{
+  float:right;
+  margin-top:1em;
+}
+
+#session-options span{
+  display:inline-block;
+  margin-top:0.8em;
+  color:#FAFAD2;
+}
+
+#content{
+  padding-top:4.2em;
+}
+
+#sessions-main,
+#forgot-password,
+#reset-password{
+  background:url('../images/bricks_background.gif');
+}
+
+#register{
+  background:url('../images/bricks_background.gif');
+}
+#sessions-main,
+#register,
+#forgot-password,
+#reset-password{
+  padding:0.5em;
+  margin-bottom:2em;
+  margin-top:2em;
+}
+
+#sessions-main h1,
+#register h1,
+#forgot-password h1,
+#reset-password h1{
+  padding-top:1em;
+  padding-left:1em;
+}
+
+#sessions-main form{
+  padding-top:5em;
+  padding-bottom:5em;
+}
+
+#register form,
+#forgot-password form,
+#reset-password form{
+  padding-top:1em;
+  padding-bottom:1em;
+}
+
+#sessions-main #logo,
+#register #logo,
+#forgot-password #logo,
+#reset-password #logo{
+ float:right;
+}
+
+#sessions-main #logo,
+#forgot-password #logo,
+#reset-password #logo{
+  padding-top:6em;
+}
+
+#register #logo{
+  padding-top:0em;
+}
+
+#sessions-main form input[type="text"],
+#sessions-main form input[type="password"],
+#sessions-main form input[type="checkbox"],
+#register form input[type="text"],
+#register form input[type="password"],
+#forgot-password form input[type="text"],
+#reset-password form input[type="password"],
+input{
+  padding-top:0.2em;
+  padding-bottom:0.2em;
+  background-color:#D2DBD8;
+  padding-left:0.2em;
+}
+
+#register form div{
+  padding-top:0.2em;
+  padding-bottom:0.2em;
+  vertical-align: baseline;
+  margin-right:0em;
+  margin-top:0.5em;
+  margin-bottom:0.5em;
+
+}
+
+#register form input[type="checkbox"],
+input[type="checkbox"]{
+  margin-top:0.8em;
+  margin-left:1em;
+}
+
+#sessions-main form button{
+  margin-top:0.4em;
+  height:4.5em;
+  margin-left:1em;
+}
+
+#sessions-main form label,
+#register form label,
+#forgot-password form label,
+#reset-password form label,
+label{
+  vertical-align: baseline;
+  margin-right:0em;
+  margin-top:0.5em;
+}
+
+.fieldWithErrors label{
+  color:red;
+}
+
+#sessions-main button,
+#register button,
+#forgot-password button,
+#forgot-password a.button,
+#reset-password button{
+  float:right;
+}
+
+#sessions-main button{
+  background:transparent;
+  margin-top:3em;
+}
+
+#sessions-main button img{
+  height:42px;
+  width:42px;
+}
+
+#main{
+  background-color:#FFFFFF;
+  padding: 2em;
+  padding-top:2em;
+  margin-top:2em;
+}
+
+#main table{
+  margin-top:1em;
+}
+
+#main table tbody tr th{
+  background-color: #CCDEEB;
+  font-size:1.2em;
+  border:solid 1px #FFFFFF;
+}
+
+#main #message{
+  margin-top:1em;
+}
+
+#main #message span{
+  padding-left:0px;
+}
+
+#main h1{
+  float:none;
+}
+
+#main h1 span{
+  padding-top:0.2em;
+}
+
+#main form.standard-form{
+  background-color: #CDCDCD;
+}
+
+#main form ul{
+  margin:0;
+}
+
+#main form fieldset{
+  border:none;
+}
+
+#main form fieldset legend{
+  display: none;
+}
+
+#main  form fieldset ul li select{
+  margin-top:1.3em;
+}
+
+#index-add-button a{
+  float:right;
+}
+
+#footer{
+  text-align:center;
+  margin-top:2em;
+}
+
+.show-info ul{
+  list-style: none;
+  background-color: #CDCDCD;
+  margin:0;
+  padding-left:1em;
+}
+
+.show-info ul li span{
+  margin-top: 0.5em;
+  vertical-align: baseline;
+}
+
+.odd{
+  background-color:#E6E6E6;
+}
+
+.pagination{
+  text-align:center;
+}
+
+input.input-calendar{
+  padding-top:0.4em;
+  padding-bottom: 0.4em;
+}
+
+.ec-rows{
+  top: 4em;
+}
+
+.ec-calendar .ec-calendar-header{
+  padding-bottom:0px;
+}
+
+#main table.ec-day-names{
+  margin-top:0em;
+  margin-bottom:0em;
+}
+
+.ec-body{
+  border:1px solid #D5D5D5;
+  border-top:none;
+}
+
+.ec-calendar{
+  clear:both;
+}
+
+.ec-calendar-header{
+  margin-bottom:0;
+  padding-bottom:0;
+}
+
+#main table tbody tr th.ec-day-name{
+  border:1px solid #D5D5D5;
+  /*padding-bottom:0;*/
+}
+
+#main table.ec-row-table{
+  margin-top:0;
+}
+
+.ec-month-nav, .ec-month-name{
+  text-align:center;
+}
+
+#event-users-assigned{
+  padding-top:2em;
+  background-color:#CDCDCD;
+  padding-bottom:1em;
+}
+
+#event-users-assigned h2{
+  margin-bottom:0px;
+  color:#5A6265;
+}
+
+#event-users-assigned ul li{
+  color:#3C4F93;
+  font-size:1.6em;
+  list-style:inside square;
+}
+
+.tip{
+  font-size:10px;
+}

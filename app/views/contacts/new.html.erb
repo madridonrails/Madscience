@@ -1,0 +1,8 @@
+<%= object_messages(@contact) %>
+<h1><span><%= t('contacts.new_contact', :client => @client.name) %></span></h1>
+<%  form_for @contact, :url => client_contacts_url(@client), :html => {:class => 'standard-form'} do |f| %>
+  <fieldset>
+    <legend><%= t 'general.new' %><br/></legend>
+    <%= render :partial => 'form', :locals => {:f => f} %>
+  </fieldset>
+<% end %>

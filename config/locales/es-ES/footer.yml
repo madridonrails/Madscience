@@ -1,0 +1,4 @@
+es-ES:
+  footer:
+    mit-license: Bajo licencia MIT
+    powered_by: Powered by {{powered_by}}

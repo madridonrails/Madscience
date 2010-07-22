@@ -1,0 +1,8 @@
+es-ES:
+  print:
+    event:
+      client-info:
+        title: Cliente
+      event-info:
+        title: Evento
+      comments: Comentarios

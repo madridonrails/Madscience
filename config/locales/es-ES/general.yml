@@ -1,0 +1,32 @@
+es-ES: 
+  general:
+    add: Añadir
+    admin_denied: No tiene permisos para realizar esta acción
+    are_you_sure: ¿Estás seguro?
+    accept: Aceptar
+    actions: Acciones
+    back: Volver
+    cancel: Cancelar
+    create: Crear
+    current_user_denied: No tiene permisos para realizar esta acción
+    customize: Personalizar
+    delete: Borrar
+    deny: Denegar
+    edit: Editar
+    exit: Salir
+    filter: Filtrar
+    login: Acceder
+    logo: Locos por la ciencia
+    new: Nuevo
+    no_matter: No importa
+    no_price: Sin precio
+    "no": "No"
+    ok: OK
+    price_before_taxes: Importe bruto
+    print: Imprimir
+    send_by_mail: Enviar por correo
+    show: Ver
+    total: Total
+    update: Modificar
+    vat: IVA
+    "yes": Sí

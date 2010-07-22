@@ -1,0 +1,33 @@
+<% client = @event.client %>
+<div id="print-client-info">
+	<table>
+		<colgroup><col/><col/></colgroup>
+		<tr>
+			<th colspan="2" class="header"><%= t('print.event.client-info.title') %></th>
+		</tr>
+		<tr>
+			<th><%= t('activerecord.attributes.client.name') %></th>
+			<td><%= client.name %></td>
+		</tr>
+		<tr>
+			<th><%= t('activerecord.attributes.client.contact') %></th>
+			<td><%= client.contact %></td>
+		</tr>
+		<tr>
+			<th><%= t('activerecord.attributes.client.phone') %></th>
+			<td><%= client.phone %></td>
+		</tr>
+		<tr>
+			<th><%= t('activerecord.attributes.client.address') %></th>
+			<td><%= client.address %></td>
+		</tr>
+		<tr>
+			<th><%= t('activerecord.attributes.client.comments') %></th>
+			<td><%= client.comments %></td>
+		</tr>
+		<tr>
+			<th><%= t('activerecord.attributes.client.cif') %></th>
+			<td><%= client.cif %></td>
+		</tr>
+	</table>
+</div>

@@ -1,0 +1,22 @@
+  <h1>
+    <% if @user %>
+      <%= t 'assignments.user_assignments', :user => @user.login %>
+    <% elsif @event %>
+      <%= t 'assignments.event_assignments', :event => @event.code %>
+    <% end %>
+  </h1>
+<%= object_messages %>
+  
+<% unless @assignments.empty? %>
+  <table id="items-list">
+    <%= render :partial => 'header' %>
+    <%= render :partial => 'assignment', :collection => @assignments %>
+  </table>
+<% end %>
+<% link = new_event_assignment_path(@event) if @event %>
+<% link = new_user_assignment_path(@user) if @user %>
+  <div id="index-add-button">
+    <%=  link_to image_tag('plus_32.png', :class => 'add-button', :alt => t('general.new'), :title => t('general.new')), link %>
+  </div>
+
+<%= will_paginate(@assignments, :prev_label => t('pagination.prev'), :next_label => t('pagination.next'), :params => params.clone.delete_if{|k,v| k == 'controller' || k == 'action' || k == 'page'}) %>

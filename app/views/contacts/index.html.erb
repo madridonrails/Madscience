@@ -1,0 +1,13 @@
+<h1><%= t 'contacts.contacts', :client => @client.name %></h1>
+<%= object_messages %>
+<%= render :partial => 'filter' %>
+<% unless @contacts.empty? %>
+  <table id="items-list">
+    <%= render :partial => 'header' %>
+    <%= render :partial => 'contact', :collection => @contacts %>
+  </table>
+<% end %>
+  <div id="index-add-button">
+    <%=  link_to image_tag('plus_32.png', :class => 'add-button', :alt => t('general.new'), :title => t('general.new')), new_client_contact_url(@client) %>
+  </div>
+<%= will_paginate(@contacts, :prev_label => t('pagination.prev'), :next_label => t('pagination.next'), :params => params.clone.delete_if{|k,v| k == 'controller' || k == 'action' || k == 'page'}) %>

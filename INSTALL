@@ -1,0 +1,13 @@
+INSTRUCTION FOR INSTALLING THE APPLICATION
+
+-Copy config/database.example.yml to config/database.yml and edit this file in order to configure your database
+
+-Install gems dependencies via rake gems:install. These gems can be found at the file config/environment.rb
+
+-Copy config/initializers/mailer.rb.example to config/initializers/mailer.rb and edit this file in order to configure mail delivery - NOTE: this for mailing delivery with google. If it is not google your mail system, you must implement it.
+
+-Edit config/intializers/application.rb in order to set some constants related to your application
+
+-Run rake db:migrate
+
+-Run rake application:init:clients in order to add clients from a csv file stored in lib/tasks/clients.csv

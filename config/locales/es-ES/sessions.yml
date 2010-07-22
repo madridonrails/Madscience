@@ -1,0 +1,7 @@
+es-ES:
+  sessions:
+    login:
+      login: Login
+      password: Contraseña
+      remember_me: Recuérdame
+      submit: Acceder

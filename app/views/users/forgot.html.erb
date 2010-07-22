@@ -1,0 +1,14 @@
+<%= error_messages_for :user %>
+<div id="forgot-password">
+  <h1><%=t('users.forgot_password.send_email')%></h1>
+  <% form_for :user do |f| -%>
+    <div>
+      <%= label_tag 'email', t('activerecord.attributes.user.email') %>
+      <%= f.text_field :email %>
+      <button type="submit" class="positive" title="<%=t('general.ok')%>">
+        <%= image_tag 'icons/tick.png', :alt => t('general.ok'), :title => t('general.ok') %><%= t('general.ok') %>
+      </button>
+      <%= link_to t('general.cancel'),login_path, :class => 'button negative' %>
+    </div>
+  <% end -%>
+</div>

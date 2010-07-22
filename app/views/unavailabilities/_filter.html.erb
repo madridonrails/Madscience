@@ -1,0 +1,13 @@
+<%=  form_tag unavailabilities_url, :method => :get %>
+  <table id="table-filter">
+    <tr>
+      <td><%= t 'activerecord.attributes.unavailability.start_at' %></td>
+      <td><%= calendar_date_select :filter, :start_at, :value => (parse_date_from_database(@filter[:start_at]) rescue ''), :class => 'input-calendar', :image => 'calendar_32.png' %> <!-- (@filter[:start_at] rescue '')   %></td>-->
+    </tr>
+    <tr>
+      <td><%= t 'activerecord.attributes.unavailability.end_at' %></td>
+      <td><%= calendar_date_select :filter, :end_at, :value => (parse_date_from_database(@filter[:end_at]) rescue ''), :class => 'input-calendar', :image => 'calendar_32.png' %></td>
+    </tr>
+  </table>
+  <%= submit_tag t('general.filter'), {:class => "button"} %>
+</form>

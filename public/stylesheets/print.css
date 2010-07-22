@@ -1,0 +1,35 @@
+#print-header{
+	margin-top: 1em;
+}
+
+#print-header span{
+	font-size:4em;
+	padding-top:0.3em;
+}
+
+#print-event-info,
+#print-client-info,
+#print-event-comments{
+	font-size:1.3em;
+}
+
+#print-event-info table,
+#print-client-info table
+{
+	border:1px solid;
+}
+
+table tbody tr th{
+	vertical-align:top;
+}
+
+th.header{
+	border-bottom:1px solid;
+	text-align:center;
+}
+
+#print-event-comments span.title{
+	font-weight:bold;
+	font-size: 2em;
+	margin-bottom: 0.3em;
+}

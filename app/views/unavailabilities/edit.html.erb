@@ -1,0 +1,8 @@
+<%= object_messages(@unavailability) %>
+<h1><span><%= "#{t('unavailabilities.edit_unavailability')}" %></span></h1>
+<% form_for @unavailability, unavailability_url(@unavailability), :method => :put, :html => {:class => 'standard-form'} do |f|%>
+  <fieldset>
+    <legend><%= t 'general.edit' %></legend>
+    <%= render :partial => 'form', :locals => {:f => f} %>
+  </fieldset>
+<% end %>

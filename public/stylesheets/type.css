@@ -1,0 +1,42 @@
+#main form fieldset li span.input{
+  font-size:1.5em;
+  margin-top:0.9em;
+}
+
+#main form fieldset li span.label{
+  margin-top:0.5em;
+}
+
+
+#sessions-main form input[type="text"],
+#sessions-main form input[type="password"],
+#sessions-main form label,
+#sessions-main button,
+#register form input[type="text"],
+#register form input[type="password"],
+#register form label,
+#register button,
+#forgot-password form input[type="text"],
+#forgot-password form label,
+#reset-password form input[type="password"],
+#reset-password form label,
+input, label,
+.show-info ul li span,
+#main form fieldset li span.label{
+  font-size:2em;
+}
+
+input.input-calendar{
+  font-size:1.5em;
+}
+
+#sessions-main form label,
+#register form label
+#forgot-password form label,
+#reset-password form label,
+label,
+#main form fieldset li span.label{
+  color:#3C4F93;
+  font-weight:bold;
+}
+

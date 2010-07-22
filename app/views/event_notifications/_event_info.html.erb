@@ -1,0 +1,28 @@
+<div id="print-event-info">
+	<table>
+		<colgroup><col/></col></colgroup>
+		<tr>
+			<th colspan="2" class="header"><%= t('print.event.event-info.title') %></th>
+		</tr>
+		<tr>
+			<th><%= t('activerecord.attributes.event.code') %></th>
+			<td><%= @event.code %></td>
+		</tr>
+		<tr>
+			<th><%= t('activerecord.attributes.event.name') %></th>
+			<td><%= @event.name %></td>
+		</tr>
+		<tr>
+			<th><%= t('activerecord.attributes.event.start_at')%></th>
+			<td><%= @event.start_at.strftime(DATETIME_FORMAT) %></td>
+		</tr>
+		<tr>
+			<th><%= t('activerecord.attributes.event.end_at')%></th>
+			<td><%= @event.end_at.strftime(DATETIME_FORMAT) %></td>
+		</tr>
+		<tr>
+			<th><%= t('activerecord.attributes.event.address') %></th>
+			<td><%= @event.address %></td>
+		</tr>
+	</table>
+</div>

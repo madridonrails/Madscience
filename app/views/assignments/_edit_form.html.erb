@@ -1,0 +1,11 @@
+<ul>
+	<li>
+		<%= f.label :aasm_state, t('activerecord.attributes.assignment.aasm_state') %>
+		<%= f.select :aasm_state, Assignment.aasm_states.collect{|s| [t("assignments.aasm_state.#{s.name.to_s}"), s.name.to_s]} %>
+	</li>
+	<% link_to_back = user_assignments_path(@user) if @user %>
+	<% link_to_back = event_assignments_path(@event) if @event %>
+	<%= form_buttons link_to_back %>
+</ul>
+
+

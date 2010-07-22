@@ -1,0 +1,15 @@
+<%unless user.blank?%>
+  <% td_class = cycle('', ' class="odd"') %>
+  <tr>
+    <td<%= td_class %>><%= h user.login %> </td>
+    <td<%= td_class %>><%= h user.email %></td>
+    <td<%= td_class %>><%= user.is_admin? ? t('general.yes'): t('general.no') %></td>
+    <td<%= td_class %>>
+       <%= link_to image_tag('show_16.png', :alt => t('general.show'),  :title => t('general.show' )), user_url(user) %>
+       <%= link_to image_tag('pencil_16.png', :alt => t('general.edit'), :title => t('general.edit' )), edit_user_url(user) %>
+       <%= link_to image_tag('delete_16.png', :alt => t('general.delete'), :title =>  t('general.delete' )), user_url(user), :method => 'delete', :confirm => t('general.are_you_sure') %>
+       <%= link_to image_tag('lab_16.png', :alt => t('users.edit_assignments'), :title => t('users.edit_assignments')), user_assignments_url(user) %>
+       <%= link_to image_tag('calendar_16.png', :alt => t('users.user_calendar'), :title => t('users.user_calendar')), user_calendar_path(user) %>
+    </td>
+  </tr>
+<% end %>

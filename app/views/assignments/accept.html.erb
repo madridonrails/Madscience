@@ -1,0 +1,14 @@
+<% message = t 'assignments.accept.title.incomplete', :user => @assignment.user.login, :event => @assignment.event.name if @assignment.event.incomplete? %>
+<% message = t 'assignments.accept.title.complete', :user => @assignment.user.login, :event => @assignment.event.name unless @assignment.event.incomplete? %>
+<h1><span><%= message %></span></h1>
+<% form_for @assignment, :url => {:action => :accept, :method => :put}, :html => {:class => 'standard-form'} do |f|%>
+  <fieldset>
+    <legend><%= t 'assignments.accept', :user => @assignment.user.login, :event => @assignment.event.name %></legend>
+    <% if @assignment.event.incomplete? %>
+      <button type="submit" class="positive">
+        <%= image_tag 'icons/tick.png', :alt => t('general.ok'), :title => t('general.ok') %><span><%= t'general.ok' %></span>
+      </button>
+    <% end %>
+      <%= link_to image_tag('icons/cross.png', :alt => t('general.cancel')) + 'Volver', root_path, :class => 'button negative', :title => t('general.cancel') %>
+  </fieldset>
+<% end %>

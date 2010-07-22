@@ -1,0 +1,9 @@
+<%= object_messages @user %>
+<h1><span><%= t'users.edit_user' %></span></h1>
+<% @user.password = @user.password_confirmation = nil %>
+<% form_for @user, user_url(@user), :method => :put, :html => {:class => 'standard-form'} do |f|%>
+  <fieldset>
+    <legend><%= t 'general.edit' %> <%= @user.login %></legend>
+    <%= render :partial => 'form', :locals => {:f => f} %>
+  </fieldset>
+<% end -%>

@@ -1,0 +1,16 @@
+es-ES:
+  users:
+    edit_assignments: Editar asignaciones
+    edit_user: Editar usuario
+    forgot: Olvidé mi contraseña
+    forgot_password:
+      send_email: Introduzca su email
+    new_user: Nuevo usuario
+    no_users: No hay usuarios
+    reset_password: Restablecer contraseña
+    signup: Registrarse
+    signup_submit: Aceptar
+    update:
+      success: El usuario se ha actualizado correctamente
+    user_calendar: Planificación del usuario
+    users: Usuarios

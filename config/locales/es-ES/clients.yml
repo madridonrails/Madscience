@@ -1,0 +1,14 @@
+es-ES:
+  clients:
+    clients: Clientes
+    contacts: Contactos
+    create:
+      success: El cliente se ha creado correctamente
+    destroy:
+      success: El cliente se ha eliminado correctamente
+    edit_client: Editar cliente
+    new_client: Nuevo cliente
+    new_event: Nuevo evento
+    no_clients: No hay clientes
+    update:
+      success: El cliente se ha modificado correctamente

@@ -1,0 +1,14 @@
+es-ES:
+  unavailabilities:
+    create:
+      success: La disponibilidad se ha creado correctamente
+    edit:
+      success: La disponibilidad se ha editado correctamente
+    edit_unavailability: Editar disponibilidad
+    destroy:
+      error: Ha habido un error al intentar eliminar la disponibilidad
+      success: La disponibilidad se ha eliminado correctamente
+    new_unavailability: Nueva disponibilidad
+    no_unavailabilities: No hay disponibilidades
+    not_available: No disponible
+    unavailabilities: Disponibilidad

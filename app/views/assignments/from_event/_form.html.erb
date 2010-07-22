@@ -1,0 +1,12 @@
+<ul>
+	<li>
+		<%= f.label :user_id, t('activerecord.attributes.assignment.user_id') %>
+		<%= belongs_to_auto_completer :assignment, :user, :login %>
+	</li>
+	<li>
+		<%= f.label :aasm_state, t('activerecord.attributes.assignment.aasm_state')%>
+		<%= f.select :aasm_state, Assignment.aasm_states.collect{|a| [t("assignments.aasm_state.#{a.name.to_s}"), a.name.to_s]}, {} %>
+	<li>
+	<%= form_buttons event_assignments_path(@event) %>
+</ul>
+

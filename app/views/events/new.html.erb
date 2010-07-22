@@ -1,0 +1,12 @@
+<%= object_messages(@event) %>
+<% h1 = t('events.new_event') if @event.client.blank? %>
+<% h1 = t('events.new_event_for_client', :client => @event.client.name) if @event.client %>
+<h1><span><%= h1 %></span></h1>
+<% url = events_path if @event.client.blank? %>
+<% url = client_events_path(@event.client) if @event.client %>
+<%  form_for @event, :url => url, :html => {:class => 'standard-form'} do |f| %>
+  <fieldset>
+    <legend><%= t 'general.new' %><br/></legend>
+    <%= render :partial => 'form', :locals => {:f => f} %>
+  </fieldset>
+<% end %>

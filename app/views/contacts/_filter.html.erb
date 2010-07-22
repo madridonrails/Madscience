@@ -1,0 +1,9 @@
+<%=  form_tag client_contacts_url(@client), :method => :get %>
+  <table id="table-filter">
+    <tr>
+      <td><%= t 'activerecord.attributes.contact.name' %></td>
+      <td><%= text_field(:filter, :name, :value => (@filter[:name] rescue '')) %> 
+    </tr>
+  </table>
+  <%= submit_tag t('general.filter'), {:class => "button"} %>
+</form>

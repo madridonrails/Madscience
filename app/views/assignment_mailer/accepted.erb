@@ -1,0 +1,1 @@
+<%= t'assignment_mailer.accepted.body', :event => @assignment.event.code, :url => link_to(t('general.cancel'), :controller => 'assignments', :action => 'cancel', :id => @assignment.id, :host => @host) %>

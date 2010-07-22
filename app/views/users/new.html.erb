@@ -1,0 +1,11 @@
+<%= object_messages @user %>
+<div id="register">
+  <h1><%= t'users.new_user' %></h1>
+  <% @user.password = @user.password_confirmation = nil %>
+
+  <% form_for :user, :url => users_path do |f| -%>
+
+      <%= render :partial => 'form', :locals => {:f => f} %>
+
+  <% end -%>
+</div>

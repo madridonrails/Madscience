@@ -1,0 +1,17 @@
+<%unless client.blank?%>
+  <% td_class = cycle('', ' class="odd"') %>
+  <tr>
+    <td<%= td_class %>><%= h client.name %> </td>
+    <td<%= td_class %>><%= h client.cif %></td>
+    <td<%= td_class %>><%= h client.address %></td>
+    <td<%= td_class %>><%= h client.mail %></td>
+    <td<%= td_class %>><%= h client.phone %></td>
+    <td<%= td_class %>>
+       <%= link_to image_tag('show_16.png', :alt => t('general.show'),  :title => t('general.show' )), client_url(client) %>
+       <%= link_to image_tag('pencil_16.png', :alt => t('general.edit'), :title => t('general.edit' )), edit_client_url(client) %>
+       <%= link_to image_tag('plus_16.png', :alt => t('clients.new_event'), :title => t('clients.new_event')), new_client_event_path(client) %>
+       <%= link_to image_tag('group_16.png', :alt => t('clients.contacts'), :title => t('clients.contacts')), client_contacts_path(client) %>
+       <%= link_to image_tag('delete_16.png', :alt => t('general.delete'), :title =>  t('general.delete' )), client_url(client), :method => 'delete', :confirm => t('general.are_you_sure') %>
+    </td>
+  </tr>
+<% end %>

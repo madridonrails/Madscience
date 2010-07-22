@@ -1,0 +1,15 @@
+es-ES:
+  navigation:
+    hello: Hola {{login}}!
+    items:
+      activities: Actividades
+      calendar: Calendario
+      clients: Clientes
+      events: Actividades
+      login: Acceder
+      logout: Salir
+      signup: Registrarse
+      unavailabilities: Disponibilidad
+      user: Editar perfil
+      user_calendar: Calendario personal
+      users: Usuarios

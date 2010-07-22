@@ -1,0 +1,45 @@
+es-ES:
+  activerecord:
+    attributes:
+      assignment:
+        aasm_state: Estado
+        event_id: Evento
+        user_id: Usuario
+      client:
+        address: Dirección
+        cif: CIF
+        comments: Notas
+        contact: Contacto
+        name: Nombre
+        mail: email
+        phone: Teléfono
+      contact:
+        client_id: Cliente
+        email: e-mail
+        name: Nombre
+        phone: Teléfono
+      event:
+        address: Dirección
+        client_id: Cliente
+        code: Código
+        comments: Notas
+        contact_id: Contacto
+        description: Descripción
+        end_at: Fin
+        name: Título
+        resources: Animadores
+        start_at: Comienzo
+      unavailability:
+        end_at: Fin
+        start_at: Comienzo
+      user:
+        email: email
+        is_admin: Administrador
+        login: Login
+        password: Contraseña
+        password_confirmation: Confirmación de contraseña
+    errors:
+      messages:
+        blank: no puede estar vacío
+        not_a_number: tiene que ser un número entero
+        taken: ya está en uso

@@ -1,0 +1,12 @@
+<%unless assignment.blank?%>
+  <% tr_class = cycle('', ' class="odd"') %>
+  <tr<%= tr_class %> id="assignment-states-<%=assignment.id%>">
+    <td><%= assignment.event.code rescue '' %></td>
+    <td><%= assignment.user.login rescue '' %></td>
+    <td><%= t"assignments.aasm_state.#{assignment.aasm_current_state}"%></td>
+    <td>
+       <%= link_to image_tag('pencil_16.png', :alt => t('general.edit'), :title => t('general.edit' )), edit_assignment_url(assignment) %>
+       <%= link_to image_tag('delete_16.png', :alt => t('general.delete'), :title =>  t('general.delete' )), assignment_url(assignment), :method => 'delete', :confirm => t('general.are_you_sure') %>
+    </td>
+  </tr>
+<% end %>

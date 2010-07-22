@@ -1,0 +1,8 @@
+<%= object_messages(@assignment) %>
+<h1><span><%= t'assignments.edit', :user => @assignment.user.login, :event => @assignment.event.code %></span></h1>
+<% form_for @assignment, :html => {:class => 'standard-form'} do |f| %>
+  <fieldset>
+    <legend><%= t'assignments.edit', :user => @assignment.user.login, :event => @assignment.event.code %></legend>
+    <%= render :partial => 'edit_form', :locals => {:assignment => @assignment, :f => f} %>
+  </fieldset>
+<% end %>

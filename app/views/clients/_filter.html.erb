@@ -1,0 +1,13 @@
+<%=  form_tag clients_url, :method => :get %>
+  <table id="table-filter">
+    <tr>
+      <td><%= label :filter, :name, t('activerecord.attributes.client.name') %></td>
+      <td><%= text_field_tag 'filter[name]', (@filter[:name] rescue '')   %></td>
+    </tr>
+    <tr>
+      <td><%= label :filter, :cif, t('activerecord.attributes.client.cif') %></td>
+      <td><%= text_field_tag 'filter[cif]', (@filter[:cif] rescue '') %></td>
+    </tr>
+  </table>
+  <%= submit_tag t('general.filter'), {:class => "button"} %>
+</form>

@@ -1,0 +1,11 @@
+<ul>
+  <li>
+    <%= f.label :cif, t('activerecord.attributes.unavailability.start_at') %>
+    <%= calendar_date_select :unavailability, :start_at, :class => 'input-calendar', :image => 'calendar_32.png' %>
+  </li>
+  <li class="last">
+    <%= f.label :contact, t('activerecord.attributes.unavailability.end_at') %>
+    <%= calendar_date_select :unavailability, :end_at, :class => 'input-calendar', :image => 'calendar_32.png' %>
+  </li>
+  <%= form_buttons unavailabilities_url, :class => 'last'%>
+</ul>

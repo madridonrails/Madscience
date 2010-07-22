@@ -1,0 +1,37 @@
+<ul>
+  <li>
+    <%= f.label 'login', t('activerecord.attributes.user.login') %>
+    <% if @user.new_record?  or current_user.is_admin? %>
+      <%= f.text_field :login %>
+    <% else %>
+      <span class="input"><%= @user.login %></span>
+    <% end %>
+  </li>
+  <li class="last">
+    <%= f.label 'email', t('activerecord.attributes.user.email') %>
+    <%= f.text_field :email %>
+  </li>
+  <li>
+    <%= f.label 'password', t('activerecord.attributes.user.password') %>
+    <%= f.password_field :password %>
+  </li>
+  <li class="last">
+    <%= f.label 'password_confirmation', t('activerecord.attributes.user.password_confirmation') %>
+    <%= f.password_field :password_confirmation %>
+  </li>
+<% if logged_in? and current_user.is_admin? %>
+  <div class="span-7 append-9">
+    <%= f.label 'is_admin', t('activerecord.attributes.user.is_admin') %>
+    <%= f.check_box(:is_admin) %>
+  </div>
+<% end %>
+
+
+<%= form_buttons users_url, :class => 'last'%>
+  <!--
+<button type="submit" class="positive" title ="<%=t('users.signup_submit')%>">
+  <%= image_tag 'icons/tick.png', :alt => t('users.signup_submit'), :title => t('users.signup_submit') %>
+  <%= t'users.signup_submit' %>
+</button>
+  -->
+</ul>

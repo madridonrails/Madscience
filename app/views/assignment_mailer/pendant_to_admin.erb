@@ -1,0 +1,5 @@
+<%= t('assignment_mailer.pendant_to_admin.user_info', :user => @user, :event => @event, :email => @email) %>
+<br/>
+<%= t('assignment_mailer.pendant_to_admin.accept_url', :url => link_to(t('general.accept'), :controller => 'assignments', :action => 'accept', :event_id => @assignment.event.id, :id => @assignment.id, :host => @host)) %>
+<br/>
+<%= t('assignment_mailer.pendant_to_admin.deny_url', :url => link_to(t('general.deny'), :controller => 'assignments', :action => 'deny', :event_id => @assignment.event.id, :id => @assignment.id, :host => @host)) %>

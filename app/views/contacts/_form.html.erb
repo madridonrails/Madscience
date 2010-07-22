@@ -1,0 +1,15 @@
+<ul>
+  <li>
+    <%= f.label :name, t('activerecord.attributes.contact.name') %>
+    <%= f.text_field :name %>
+  </li>
+  <li class="last">
+    <%= f.label :phone, t('activerecord.attributes.contact.phone') %>
+    <%= f.text_field :phone %>
+  </li>
+  <li>
+    <%= f.label :email, t('activerecord.attributes.contact.email') %>
+    <%= f.text_field :email %>
+  </li>
+  <%= form_buttons client_contacts_url(@client), :class => 'last'%>
+</ul>

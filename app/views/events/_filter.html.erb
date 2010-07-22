@@ -1,0 +1,14 @@
+<%=  form_tag events_url, :method => :get %>
+  <table id="table-filter">
+    <tr>
+      <td><%= label :filter, :cif, t('activerecord.attributes.event.client_id') %></td>
+      <td><!--%= belongs_to_auto_completer_filter :event, :client, :name %></td-->
+        <%= belongs_to_auto_completer_filter :event, :client, :cif %></td>
+    </tr>
+    <tr>
+      <td><%= label :filter, :code, t('activerecord.attributes.event.code') %></td>
+      <td><%= text_field_tag 'filter[code]', (@filter[:code] rescue '')   %></td>
+    </tr>
+  </table>
+  <%= submit_tag t('general.filter'), {:class => "button"} %>
+</form>
